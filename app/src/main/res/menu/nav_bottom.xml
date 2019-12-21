@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/nav_hierarchy"
+        android:icon="@drawable/ic_hierarchy"
+        android:title="@string/hierarchy"/>
+
+    <item
+        android:id="@+id/nav_articles"
+        android:icon="@drawable/ic_wx_article"
+        android:title="@string/wx_article" />
+
+    <item
+        android:id="@+id/nav_project"
+        android:icon="@drawable/ic_project"
+        android:title="@string/project" />
+
+</menu>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">玩安卓</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    // nav_bottom
+    <string name="home">首页</string>
+    <string name="hierarchy">体系</string>
+    <string name="wx_article">公众号</string>
+    <string name="project">项目</string>
+
+    // nav_view
+    <string name="my_points">积分</string>
+    <string name="favorites">收藏</string>
+    <string name="trend">趋势</string>
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    <string name="logout">退出登录</string>
+
+    // toolbar_menu
+    <string name="action_search">搜索</string>
+    <string name="action_websites">常用网站</string>
+
+    // item_article
+    <string name="article_fresh">新</string>
+    <string name="article_top">置顶</string>
+
+    // article_detail
+    <string name="open_with_browser">在浏览器打开</string>
+    <string name="share">分享</string>
+
+    // others
+    <string name="contentDescription_favorite">收藏文章</string>
+    <string name="write_permission_rejected">写入权限被拒绝</string>
+
+    // login
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="go_login">去登录</string>
+    <string name="go_register">去注册</string>
+    <string name="welcome">欢迎使用</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="username_not_empty">用户名不能为空</string>
+    <string name="password_not_empty">密码不能为空</string>
+
+    <string name="empty_view_hint">暂无数据</string>
+    <string name="error_view_hint">加载失败</string>
+    <string name="collect_success">收藏成功</string>
+    <string name="cancel_collect">取消收藏</string>
+    <string name="login_first">小主不急，请先登录噢</string>
+
+    // setting
+    <string name="cache_setting">缓存设置</string>
+    <string name="clear_cache">清除缓存</string>
+
+
+
+</resources>

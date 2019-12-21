@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_favorites"
+        android:icon="@drawable/ic_favorites"
+        android:title="@string/favorites" />
+
+    <item
+        android:id="@+id/menu_trend"
+        android:icon="@drawable/ic_trending_up"
+        android:title="@string/trend" />
+
+    <item
+        android:id="@+id/menu_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/settings" />
+
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/ic_about"
+        android:title="@string/about" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="@string/logout"
+        android:icon="@drawable/ic_logout" />
+
+</menu>

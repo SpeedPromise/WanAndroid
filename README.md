@@ -3,13 +3,13 @@
 [![Platform][1]][2]  [![Release][3]][4]  [![Release][5]][6]  [![GitHub license][7]][8]
 
 [1]:https://img.shields.io/badge/platform-Android-blue.svg
-[2]:https://github.com/ForgetSky/ForgetSkyWanAndroid
+[2]:https://github.com/SpeedPromise/WanAndroid
 
 [3]:https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat
 [4]:https://android-arsenal.com/api?level=21
 
-[5]:https://img.shields.io/badge/Version-V1.1.2-brightgreen.svg
-[6]:https://github.com/ForgetSky/ForgetSkyWanAndroid/releases/latest
+[5]:https://img.shields.io/badge/Version-V1.1.0-brightgreen.svg
+[6]:https://https://github.com/SpeedPromise/WanAndroid/releases/latest
 
 [7]:https://img.shields.io/badge/license-Apache%202-blue.svg
 [8]:http://www.apache.org/licenses/LICENSE-2.0

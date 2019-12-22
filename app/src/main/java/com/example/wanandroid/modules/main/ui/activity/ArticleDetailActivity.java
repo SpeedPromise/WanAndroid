@@ -123,12 +123,10 @@ public class ArticleDetailActivity extends BaseActivity<ArticleDetailPresenter> 
 
     private void getBundleData() {
         Bundle bundle = getIntent().getExtras();
-        assert bundle != null;
-        articleItem = (ArticleItemData) bundle.getSerializable(Constants.ARTICLE_DETAIL);
-        articleId = articleItem.getId();
-        articleLink = articleItem.getLink();
-        title = articleItem.getTitle();
-        isCollected = articleItem.isCollect();
+        articleId = bundle.getInt(Constants.ARTICLE_ID);
+        articleLink = bundle.getString(Constants.ARTICLE_LINK);
+        title = bundle.getString(Constants.ARTICLE_TITLE);
+        isCollected = bundle.getBoolean(Constants.ARTICLE_COLLECTED);
         isShowCollectIcon = bundle.getBoolean(Constants.ARTICLE_ICON);
         itemPos = bundle.getInt(Constants.ARTICLE_POSITION);
         eventBusTag = bundle.getString(Constants.EVENT_BUS_TAG);

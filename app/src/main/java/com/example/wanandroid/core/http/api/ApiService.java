@@ -7,6 +7,7 @@ import com.example.wanandroid.modules.WxArticle.bean.WxArticleChapterData;
 import com.example.wanandroid.modules.login.bean.LoginData;
 import com.example.wanandroid.modules.main.bean.ArticleItemData;
 import com.example.wanandroid.modules.main.bean.ArticleListData;
+import com.example.wanandroid.modules.home.banner.BannerData;
 import com.example.wanandroid.modules.main.bean.UsefulSiteData;
 import com.example.wanandroid.modules.main.bean.UserInfoData;
 
@@ -38,6 +39,12 @@ public interface ApiService {
      */
     @GET("article/top/json")
     Observable<BaseResponse<List<ArticleItemData>>> getTopArticles();
+
+    /**
+     * banner
+     */
+    @GET("banner/json")
+    Observable<BaseResponse<List<BannerData>>> getBannerData();
 
     /**
      * 知识体系

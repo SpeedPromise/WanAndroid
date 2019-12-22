@@ -35,6 +35,7 @@ public class Constants {
     public static final String ARTICLE_LINK = "article_link";
     public static final String ARTICLE_TITLE = "article_title";
     public static final String ARTICLE_ID = "article_id";
+    public static final String ARTICLE_COLLECTED = "article_collected";
     public static final String ARTICLE_ICON = "article_icon";
     public static final String ARTICLE_POSITION = "article_position";
 

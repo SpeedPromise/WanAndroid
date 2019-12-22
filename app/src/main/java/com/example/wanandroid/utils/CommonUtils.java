@@ -16,9 +16,14 @@ import java.util.Random;
 
 public class CommonUtils {
 
-    public static void startArticleDetailActivity(Context context, ArticleItemData item, boolean isShowCollectIcon, int position, String eventBusTag) {
+    public static void startArticleDetailActivity(Context context, int id, String title, String link,
+                                                  boolean isCollected, boolean isShowCollectIcon,
+                                                  int position, String eventBusTag) {
         Intent intent = new Intent(context, ArticleDetailActivity.class);
-        intent.putExtra(Constants.ARTICLE_DETAIL, item);
+        intent.putExtra(Constants.ARTICLE_ID, id);
+        intent.putExtra(Constants.ARTICLE_TITLE, title);
+        intent.putExtra(Constants.ARTICLE_LINK, link);
+        intent.putExtra(Constants.ARTICLE_COLLECTED, isCollected);
         intent.putExtra(Constants.ARTICLE_ICON ,isShowCollectIcon);
         intent.putExtra(Constants.ARTICLE_POSITION, position);
         intent.putExtra(Constants.EVENT_BUS_TAG, eventBusTag);

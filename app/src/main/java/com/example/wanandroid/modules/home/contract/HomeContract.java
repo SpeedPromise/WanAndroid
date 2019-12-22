@@ -1,7 +1,10 @@
 package com.example.wanandroid.modules.home.contract;
 
 import com.example.wanandroid.modules.main.bean.ArticleListData;
+import com.example.wanandroid.modules.home.banner.BannerData;
 import com.example.wanandroid.modules.main.contract.CollectEventContract;
+
+import java.util.List;
 
 public interface HomeContract {
 
@@ -9,16 +12,18 @@ public interface HomeContract {
 
         void showArticleList(ArticleListData data, boolean isRefresh);
 
-//        void showBanner();
+        void showBanner(List<BannerData> bannerData);
     }
 
     interface Presenter extends CollectEventContract.Presenter<View> {
 
-        void getArticleList(boolean isShow);
+        void getBannerData(boolean isShowLoading);
 
-        void getHomeData(boolean isShow);
+        void getArticleList(boolean isShowLoading);
 
-        void refreshLayout(boolean isShow);
+        void getHomeData(boolean isShowLoading);
+
+        void refreshLayout(boolean isShowLoading);
 
         void loadMore();
     }

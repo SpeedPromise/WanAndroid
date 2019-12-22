@@ -34,6 +34,7 @@ ext {
             "SmartRefreshHeader"               : "com.scwang.smartrefresh:SmartRefreshHeader:${version["smartrefreshVersion"]}",
             "agentweb"                         : "com.just.agentweb:agentweb:4.1.2",
             "immersionbar"                     : "com.gyf.immersionbar:immersionbar:3.0.0",
+            "banner"                           : "com.youth.banner:banner:1.4.10",
 
             //network
             "retrofit"                         : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",

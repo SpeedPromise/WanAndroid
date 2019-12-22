@@ -17,7 +17,7 @@
 ## 简介
 本项目主要使用[玩Android](http://www.wanandroid.com/blog/show/2)网站提供的API, 并实现其主要功能；项目基于 `MVP` 架构， 使用 `Material Design` + `RxJava` + `Retrofit` + `Glide` 等开源框架进行设计实现，使用`DataManager`类对Model统一管理，代码结构清晰，功能详实。项目会持续更新维护，欢迎大家提问题和建议，使项目更加完善。
 
-## Screenshot
+## Screenshotd
 
 ## API
 

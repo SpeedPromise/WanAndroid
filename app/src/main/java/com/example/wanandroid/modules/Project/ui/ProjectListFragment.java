@@ -52,10 +52,16 @@ public class ProjectListFragment extends BaseFragment<ProjectListPresenter> impl
         List<ArticleItemData> mProjectList = new ArrayList<>();
         mAdapter = new ProjectAdapter(R.layout.item_article, mProjectList);
         mAdapter.setOnItemClickListener((adapter, view, position) -> {
-            ArticleItemData item = mAdapter.getItem(position);
-            if (item != null) {
-                CommonUtils.startArticleDetailActivity(getContext(), mAdapter.getItem(position), true, position, Constants.PROJECT_PAGER);
+            if (mAdapter.getData().size() <= 0 || mAdapter.getData().size() < position) {
+                return;
             }
+            CommonUtils.startArticleDetailActivity(getContext(),
+                    mAdapter.getItem(position).getId(),
+                    mAdapter.getItem(position).getTitle(),
+                    mAdapter.getItem(position).getLink(),
+                    mAdapter.getItem(position).isCollect(),
+                    true, position, Constants.MAIN_PAGER);
+
         });
         mAdapter.setOnItemChildClickListener(((adapter, view, position) -> childClickEvent(view, position)));
 

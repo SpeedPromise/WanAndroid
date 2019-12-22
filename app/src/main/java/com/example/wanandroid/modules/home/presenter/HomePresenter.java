@@ -7,10 +7,13 @@ import com.example.wanandroid.core.event.LogoutEvent;
 import com.example.wanandroid.core.event.RefreshHomeEvent;
 import com.example.wanandroid.modules.home.contract.HomeContract;
 import com.example.wanandroid.modules.main.bean.ArticleListData;
+import com.example.wanandroid.modules.home.banner.BannerData;
 import com.example.wanandroid.modules.main.presenter.CollectEventPresenter;
 
 import org.simple.eventbus.EventBus;
 import org.simple.eventbus.Subscriber;
+
+import java.util.List;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -20,6 +23,23 @@ public class HomePresenter extends CollectEventPresenter<HomeContract.View> impl
 
     private int curPage;
     private boolean isRefresh = true;
+
+    @Override
+    public void getBannerData(boolean isShowLoading) {
+        addSubscribe(apiService.getBannerData()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .filter(data -> mView != null)
+                .subscribeWith(new BaseObserver<List<BannerData>>(mView,
+                        "Failed to get banner data",
+                        isShowLoading) {
+                    @Override
+                    public void onSuccess(List<BannerData> bannerDataList) {
+                        mView.showBanner(bannerDataList);
+                    }
+                })
+        );
+    }
 
     @Override
     public void getArticleList(boolean isShowLoading) {
@@ -39,6 +59,7 @@ public class HomePresenter extends CollectEventPresenter<HomeContract.View> impl
 
     @Override
     public void getHomeData(boolean isShowLoading) {
+        getBannerData(isShowLoading);
         addSubscribe(Observable.zip(apiService.getTopArticles(), apiService.getArticleList(curPage), (topArticlesBaseResponse, articleListBaseResponse) -> {
             articleListBaseResponse.getData().getDatas().addAll(0, topArticlesBaseResponse.getData());
             return articleListBaseResponse;

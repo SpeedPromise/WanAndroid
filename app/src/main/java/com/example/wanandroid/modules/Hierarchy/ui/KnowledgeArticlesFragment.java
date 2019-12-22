@@ -56,7 +56,12 @@ public class KnowledgeArticlesFragment extends BaseFragment<KnowledgeArticlesPre
         mAdapter.setOnItemClickListener((adapter, view, position) -> {
             ArticleItemData item = mAdapter.getItem(position);
             if (item != null) {
-                CommonUtils.startArticleDetailActivity(getContext(), mAdapter.getItem(position), true, position, Constants.KNOWLEDGE_PAGER);
+                CommonUtils.startArticleDetailActivity(getContext(),
+                        mAdapter.getItem(position).getId(),
+                        mAdapter.getItem(position).getTitle(),
+                        mAdapter.getItem(position).getLink(),
+                        mAdapter.getItem(position).isCollect(),
+                        true, position, Constants.KNOWLEDGE_PAGER);
             }
         });
         mAdapter.setOnItemChildClickListener((adapter, view, position) -> childClickEvent(view, position));
